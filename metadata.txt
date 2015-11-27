@@ -1,0 +1,8 @@
+[general]
+name=標準地域メッシュインデックス表示ツール
+description=標準地域メッシュインデックス表示ツール
+qgisMinimumVersion=2.0.0
+version=0.1.1
+icon=icon.png
+auther=karaGR
+homepade=http://
