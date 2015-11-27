@@ -80,7 +80,6 @@ class mesh_canvas(QgsMapCanvas):
     def onExtentsChanged(self):
         self.setExtent( self.iface.mapCanvas().extent() )    
         self.redraw_mesh()
-        self.iface.actionPan().trigger()
         self.refresh()
         
     def onScaleChanged(self):
@@ -115,7 +114,7 @@ class mesh_canvas(QgsMapCanvas):
         Lx1d,Lx2d,Lx3d,Ly1d,Ly2d,Ly3d = self.res_mesh_index(y_min, x_min)
         Rx1d,Rx2d,Rx3d,Uy1d,Uy2d,Uy3d = self.res_mesh_index(y_max, x_max)
         x_range = x_max - x_min
-        y_range = y_max = y_min
+        y_range = y_max - y_min
         
         return {"Lx1d":Lx1d,"Lx2d":Lx2d,"Lx3d":Lx3d,
                 "Rx1d":Rx1d,"Rx2d":Rx2d,"Rx3d":Rx3d,
